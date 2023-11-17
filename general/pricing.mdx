@@ -1,0 +1,21 @@
+---
+title: 'Pricing'
+description: 'Here you can find everything about pricing'
+icon: 'credit-card'
+---
+
+## Finetuning
+
+Finetuning prices consist of a base fee and costs that are dependent on the training dataset size and number of epochs. 
+Below you can find pricing for different models:
+
+
+
+| Model | Base Price                           | Token Pricing            |
+| -------- | ------------------------------------- | -------------------- |
+| HuggingFaceH4/zephyr-7b-beta     | $2                      | $0.002 / 1K tokens    |
+
+
+If you train for multiple epochs, your token price will be multiplied by your number of training epochs, leading to the following formula for your total price:
+
+`base_price + price_per_thousand_tokens * num_of_thousand_tokens * num_epochs`.

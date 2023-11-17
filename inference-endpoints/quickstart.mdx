@@ -1,0 +1,49 @@
+---
+title: 'Quickstart'
+description: 'Here is how you can query a model using inference endpoints'
+icon: 'bolt'
+---
+
+### Sign up and get an API key
+
+To get started, sign up to Haven. Afterwards, you can find and copy your key in the [dashboard](app.haven.run).
+
+```
+Here should be a screenshot
+```
+
+### Send a model query
+
+After you have obtained your API key, you can send your first model query. Haven's inference endpoints are compatible with the [OpenAI API](https://platform.openai.com/docs/api-reference), you merely have to add your key and point to another URL:
+```python
+import openai
+
+openai.api_key = "<YOUR-HAVEN-API-KEY>"
+openai.api_base = "http://api.haven.run/v1/inference"
+```
+
+Now, you can start sending queries, like you would send them to OpenAI:
+
+```python
+messages=[
+            {
+              "role": "system",
+              "content": "You are a friendly AI assistant."
+            },
+            {
+              "role": "user",
+              "content": "Hi! Please explain machine learning to me."
+            }
+        ]
+
+response = openai.ChatCompletion.create(
+    model="llama-70b",
+    messages=messages,
+    max_tokens=100,
+    stream=True
+)
+
+print(response.choices[0].message.content)
+```
+
+In this case, we selected `meta-llama/Llama-2-70b-chat-hf` as our model, but you can replace this parameter with any of our [supported models](supported-models).
