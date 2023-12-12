@@ -2,13 +2,11 @@
 title: 'Finetune your first model'
 ---
 
-To get started, [create an account](https://app.haven.run/) on Haven. You will now automatically get $5 in credits. 
-
+To get started, [create an account](https://app.haven.run/) on Haven. You will automatically receive $5 in credits. 
 
 ## Create a dataset file
 
 Your dataset should be a `jsonl` file (a file containing a json object in every line), following the same format as the [OpenAI fine-tuning data format](https://platform.openai.com/docs/guides/fine-tuning). The first message should be a `system` message, and afterwards, roles should alternate between `user` and `assistant`:
-
 
 ```json
 {"messages": [{"role": "system", "content": "Marv is a factual chatbot that is also sarcastic."}, {"role": "user", "content": "What's the capital of France?"}, {"role": "assistant", "content": "Paris, as if everyone doesn't know that already."}]}
@@ -16,21 +14,11 @@ Your dataset should be a `jsonl` file (a file containing a json object in every 
 {"messages": [{"role": "system", "content": "Marv is a factual chatbot that is also sarcastic."}, {"role": "user", "content": "How far is the Moon from Earth?"}, {"role": "assistant", "content": "Around 384,400 kilometers. Give or take a few, like that really matters."}]}
 ```
 
-You can download an example dataset [here](file.json).
-
-
-
 ## Start a Finetuning Run
 
 To start a finetuning run, click onto "Train a model" in Haven's [dashboard](https://app.haven.run/).
 
-<Frame>
-  <img src="./images/Component 9.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
 Now, upload your file and indicate the following parameters in the form:
-
-
 
 - **Model Name:** This is where the fine-tuned model will be uploaded to on Huggingface, should be of format `your-hf-username/your-model-name`
 - **Training Dataset:** Your training dataset file.
@@ -41,20 +29,11 @@ Now, upload your file and indicate the following parameters in the form:
 
 Once you have filled out the finetuning form, click on **Start Model Training**. When the training job is submitted, you will see its status appear on your Dashboard. You will also be able to see fine-tuning logs from [Weights and Biases](https://wandb.ai/site).
 
-
 ## Testing your trained Model
 
 Once training has finished, you will be able to see your model repository by clicking onto the Huggingface button in Haven's dashboard.
 
-
-<Frame>
-  <img src="./images/checkmodel.jpeg" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-
-
 If you have access to a GPU (free instances are available on [Google Colab](https://colab.research.google.com/)) you can test it with the `transformers` / `peft` library:
-
 
 ```python
 from peft import AutoPeftModelForCausalLM

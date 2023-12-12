@@ -1,60 +1,67 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
-  "favicon": "/haven-favicon.svg",
-  "colors": {
-    "primary": "#5350EB",
-    "light": "#7674F5",
-    "dark": "#3e3cc2",
-    "anchors": {
-      "from": "#7674F5",
-      "to": "#3e3cc2"
-    }
-  },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://app.haven.run"
-  },
-
-  "anchors": [
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://discord.gg/JDjbfp6q2G"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://haven.run/blog"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Quickstart",
-      "pages": ["introduction", "finetuning-quickstart"]
-    },
-    {
-      "group": "Finetuning",
-      "pages": ["finetuning/dataset-format", "finetuning/supported-models"]
-    },
-    {
-      "group": "General",
-      "pages": ["general/pricing"]
-    }
-  ],
-  "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  }
+	"$schema": "https://mintlify.com/schema.json",
+	"name": "Haven Docs",
+	"logo": {
+		"dark": "/logo/dark.svg",
+		"light": "/logo/light.svg"
+	},
+	"favicon": "/images/favicon.ico",
+	"colors": {
+		"primary": "#5350EB",
+		"light": "#7674F5",
+		"dark": "#3e3cc2",
+		"anchors": {
+			"from": "#7674F5",
+			"to": "#3e3cc2"
+		}
+	},
+	"topbarLinks": [
+		{
+			"name": "Discord",
+			"url": "https://discord.gg/JDjbfp6q2G"
+		}
+	],
+	"topbarCtaButton": {
+		"name": "Haven",
+		"url": "https://app.haven.run"
+	},
+	"anchors": [
+		{
+			"name": "Discord",
+			"icon": "discord",
+			"url": "https://discord.gg/JDjbfp6q2G"
+		},
+		{
+			"name": "Blog",
+			"icon": "newspaper",
+			"url": "https://haven.run/blog"
+		}
+	],
+	"navigation": [
+		{
+			"group": "Quickstart",
+			"pages": [
+				"introduction",
+				"finetuning-quickstart"
+			]
+		},
+		{
+			"group": "Finetuning",
+			"pages": [
+				"finetuning/dataset-format",
+				"finetuning/supported-models"
+			]
+		},
+		{
+			"group": "General",
+			"pages": [
+				"general/pricing"
+			]
+		}
+	],
+	"footerSocials": {
+		"twitter": "https://twitter.com/haven_run",
+		"github": "https://github.com/havenhq",
+		"linkedin": "https://www.linkedin.com/company/haven-ml"
+	}
 }

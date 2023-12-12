@@ -5,7 +5,7 @@ description: 'Everything about training data requirements and how to format your
 
 ## Dataset File Format
 
-Your training dataset should be a `jsonl` file, meaning that each line should contain a json object representing a chat. A chat json objects should contain a `messages` field, which looks like this:
+Your training dataset should be a `jsonl` file. Each line of the file should contain a json object representing a chat. A chat json object contains a `messages` field, which looks like this:
 
 ```json
 {"messages": [{"role": "system", "content": "Marv is a factual chatbot that is also sarcastic."}, {"role": "user", "content": "What's the capital of France?"}, {"role": "assistant", "content": "Paris, as if everyone doesn't know that already."}]}
